@@ -12,7 +12,7 @@
       <td>{{employe.password}}</td>
       <td>{{employe.visibilite}}</td>
       <button [ngStyle]="{'background-color' : employe.visibilite===1 ? 'red' : 'green', 'border-radius': '10px'}">Disable</button>
-      <button [style.color]="'green'">Modifier</button>
+      <button [style.color]="'green'" routerLink="/admin/updateemploye/{{employe.id}}">Modifier</button>
     </tr>
 
   </table>

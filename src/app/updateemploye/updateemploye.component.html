@@ -1,0 +1,94 @@
+<form style="margin: 50px" [formGroup]="form">
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="id">Id</label>
+      <input disabled type="text" id="id" class="form-control"  formControlName="id" >
+    </div>
+    <div class="form-group col-md-3">
+      <label for="nom">Name</label>
+      <input type="text" id="nom" class="form-control" [ngClass]="{'is-invalid': nom.invalid && nom.touched}" formControlName="nom">
+      <div [hidden]="nom.valid">
+        <p >Nom obligatoire *</p>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="prenom">Prenom</label>
+      <input type="text" id="prenom" class="form-control" [ngClass]="{'is-invalid': prenom.invalid && prenom.touched}" formControlName="prenom">
+      <div [hidden]="prenom.valid">
+        <p >Prenom obligatoire *</p>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="email">Email</label>
+      <input type="text" id="email" class="form-control" [ngClass]="{'is-invalid': email.invalid && email.touched}" formControlName="email">
+      <div [hidden]="email.valid">
+        <p >Email obligatoire *</p>
+      </div>
+    </div>
+  </div>
+  <h2>Adresse</h2>
+  <div formGroupName="adresse">
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="numRue">N° de Rue</label>
+        <input type="text" id="numRue" class="form-control" [ngClass]="{'is-invalid': numRue.invalid && numRue.touched}" formControlName="numRue">
+        <div [hidden]="numRue.valid">
+          <p >N° de rue obligatoire *</p>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="rue">Rue</label>
+        <input type="text" id="rue" class="form-control" [ngClass]="{'is-invalid': rue.invalid && rue.touched}" formControlName="rue">
+        <div [hidden]="rue.valid">
+          <p >Rue obligatoire *</p>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" class="form-control" [ngClass]="{'is-invalid': ville.invalid && ville.touched}" formControlName="ville">
+        <div [hidden]="ville.valid">
+          <p >Ville obligatoire *</p>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="codePostal">Code Postale</label>
+        <input type="text" id="codePostal" class="form-control" [ngClass]="{'is-invalid': codePostal.invalid && codePostal.touched}" formControlName="codePostal">
+        <div [hidden]="codePostal.valid">
+          <p >Code Postale obligatoire *</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="numTele">N° Téléphone</label>
+      <input type="text" id="numTele" class="form-control" [ngClass]="{'is-invalid': numTele.invalid && numTele.touched}" formControlName="numTele">
+      <div [hidden]="numTele.valid">
+        <p >N° Tel obligatoire *</p>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="username">Username</label>
+      <input type="text" id="username" class="form-control" [ngClass]="{'is-invalid': username.invalid && username.touched}" formControlName="username">
+      <div [hidden]="username.valid">
+        <p >Username obligatoire *</p>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="password">Password</label>
+      <input type="text" id="password" class="form-control" [ngClass]="{'is-invalid': password.invalid && password.touched}" formControlName="password">
+      <div [hidden]="password.valid">
+        <p >Password obligatoire *</p>
+      </div>
+    </div>
+    <div class="form-group col-md-3">
+      <label for="visibilite">Visibilite</label>
+      <input disabled type="text" id="visibilite" class="form-control" [ngClass]="{'is-invalid': visibilite.invalid && visibilite.touched}" formControlName="visibilite">
+      <div [hidden]="password.valid">
+        <p >Password obligatoire *</p>
+      </div>
+    </div>
+  </div>
+  <button type="button" (click)="modifierEmploye(form)" class="btn btn-dark" [disabled]="form.invalid">Ajouter</button>
+</form>
+

@@ -16,16 +16,16 @@ export class EmployeService {
   }
 
   getEmployeById(id: number) {
-    return this.http.get('api/employes' + id);
+    return this.http.get('api/employes/' + id);
   }
   addEmploye(data: any): Observable<any> {
-    return this.http.post('api/employes', data);
+    return this.http.post('api/employes/', data);
   }
 
   updateEmploye(data: any, id: any): Observable<any> {
-    return this.http.put('api/employes' + id, data);
+    return this.http.put('api/employes/' + id, data);
   }
   deleteEmploye(id: number){
-    return this.http.delete('api/employes' + id);
+    return this.http.delete('api/employes/' + id);
   }
 }

@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddemployeComponent } from './addemploye/addemploye.component';
 import { AddclientComponent } from './addclient/addclient.component';
+import { UpdateemployeComponent } from './updateemploye/updateemploye.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddclientComponent } from './addclient/addclient.component';
     EmployeComponent,
     ListemployeComponent,
     AddemployeComponent,
-    AddclientComponent
+    AddclientComponent,
+    UpdateemployeComponent
   ],
   imports: [
     BrowserModule,
