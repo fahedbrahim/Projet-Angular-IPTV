@@ -1,0 +1,112 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "nom": "Brahim",
+      "prenom": "Fahed",
+      "email": "fahed.brahim@esprit.tn",
+      "username": "fahedbrahim",
+      "password": "123456"
+    }
+  ],
+  "employes": [
+    {
+      "id": 1,
+      "nom": "Brahim",
+      "prenom": "Khaled",
+      "email": "kahled.brahim@esprit.tn",
+      "adresse": {
+        "numRue": 3,
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": 5100
+      },
+      "numTele": 58093627,
+      "username": "khaledbrahim",
+      "password": "123",
+      "visibilite": 1
+    },
+    {
+      "id": 2,
+      "nom": "Hammami",
+      "prenom": "Elyes",
+      "email": "elyes.hammami@esprit.tn",
+      "adresse": {
+        "numRue": 3,
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": 5100
+      },
+      "numTele": 25545744,
+      "username": "elyeshammami",
+      "password": "123",
+      "visibilite": 1
+    },
+    {
+      "id": 3,
+      "nom": "Brahim",
+      "prenom": "Houssine",
+      "email": "houssine.brahim@esprit.tn",
+      "adresse": {
+        "numRue": 3,
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": 5100
+      },
+      "numTele": 20705550,
+      "username": "houssinebrahim",
+      "password": "123",
+      "visibilite": 0
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "nom": "Hassine",
+      "prenom": "Nahla",
+      "email": "nahla.hassine@esprit.tn",
+      "adresse": {
+        "numRue": 3,
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": 5100
+      },
+      "numTele": 54704000,
+      "datedebut": "Mon Nov 23 2020 17:53:55 GMT+0100",
+      "dateexpiration": "Nov 23 2021 17:53:55 GMT+0100",
+      "idemploye": 1
+    },
+    {
+      "id": 2,
+      "nom": "Hassine",
+      "prenom": "Mariem",
+      "email": "mariem.hassine@esprit.tn",
+      "adresse": {
+        "numRue": 4,
+        "rue": "rue elNawres",
+        "ville": "Ksiba",
+        "codePostal": 5031
+      },
+      "numTele": 54704001,
+      "datedebut": "Mon Nov 23 2020 17:53:55 GMT+0100",
+      "dateexpiration": "Nov 23 2021 17:53:55 GMT+0100",
+      "idemploye": 1
+    },
+    {
+      "id": 3,
+      "nom": "Brahim",
+      "prenom": "Salim",
+      "email": "salim.brahim@esprit.tn",
+      "adresse": {
+        "numRue": 3,
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": 5100
+      },
+      "numTele": 97805550,
+      "datedebut": "Mon Nov 23 2020 17:53:55 GMT+0100",
+      "dateexpiration": "Nov 23 2021 17:53:55 GMT+0100",
+      "idemploye": 2
+    }
+  ]
+}

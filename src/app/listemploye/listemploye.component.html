@@ -1,0 +1,20 @@
+<span *ngFor="let employe of employes">
+  <table border="1">
+    <tr>
+      <td>{{employe.id}}</td>
+      <td>{{employe.nom}}</td>
+      <td>{{employe.prenom}}</td>
+      <td>{{employe.email}}</td>
+      <td>{{employe.adresse.numRue}}</td>
+      <td>{{employe.adresse.rue}}</td>
+      <td>{{employe.adresse.codePostal}}</td>
+      <td>{{employe.username}}</td>
+      <td>{{employe.password}}</td>
+      <td>{{employe.visibilite}}</td>
+      <button [ngStyle]="{'background-color' : employe.visibilite===1 ? 'red' : 'green', 'border-radius': '10px'}">Disable</button>
+      <button [style.color]="'green'">Modifier</button>
+    </tr>
+
+  </table>
+</span>
+<p>Nombre total des employe est {{nbemploye}}</p>

@@ -1,0 +1,30 @@
+<section class="Form my-4 mx-5">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-lg-5">
+        <img src="./assets/photo acceuil.jpg" class="img-fluid" >
+      </div>
+      <div class="col-lg-7 px-5 py-5">
+        <h1 class="font-weight-bold py-3">N&F</h1>
+        <h4>Sign into your account</h4>
+        <form #f="ngForm">
+          <div class="form-row">
+            <div class="col-lg-7">
+              <input type="email" placeholder="Username" class="form-control my-3 p-4" ngModel name="username" #username="ngModel">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-7">
+              <input type="password" placeholder="Password" class="form-control my-3 p-4" ngModel name="password" #password="ngModel">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-7">
+              <button type="button" class="btn1" (click)="validLogin(f)">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

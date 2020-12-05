@@ -1,0 +1,44 @@
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Prenom</th>
+    <th scope="col">Email</th>
+    <th scope="col">N° Rue</th>
+    <th scope="col">Rue</th>
+    <th scope="col">Ville</th>
+    <th scope="col">Code Postal</th>
+    <th scope="col">N° Tel</th>
+    <th scope="col">Date Abonnement</th>
+    <th scope="col">Date Expiration</th>
+    <th scope="col">Id Employe</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let client of clients">
+      <tr *ngIf="client.idemploye == idemploye">
+        <th scope="row">{{client.id}}</th>
+        <td>{{client.nom}}</td>
+        <td>{{client.prenom}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.adresse.numRue}}</td>
+        <td>{{client.adresse.rue}}</td>
+        <td>{{client.adresse.ville}}</td>
+        <td>{{client.adresse.codePostal}}</td>
+        <td>{{client.numTele}}</td>
+        <td>{{client.datedebut | date:"short"}}</td>
+        <td>{{client.dateexpiration | date:"short"}}</td>
+        <td>{{client.idemploye}}</td>
+        <td><button>Modifier</button></td>
+        <td><button>Supprimer</button></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+
+
