@@ -13,6 +13,7 @@ export class AddemployeComponent implements OnInit {
   form: FormGroup;
   employes: Employe[];
   newid: number;
+  visible = 1;
 
   constructor(private formP: FormBuilder, private employeservice: EmployeService, private http: HttpClient) {
     this.form = this.formP.group({
@@ -43,6 +44,10 @@ export class AddemployeComponent implements OnInit {
     );
   }
 
+  ajouterEmploye(u) {
+    this.employeservice.addEmploye(u.value).subscribe();
+  }
+
   get id() {
     return this.form.get('id');
   }
@@ -52,15 +57,19 @@ export class AddemployeComponent implements OnInit {
   }
 
   get prenom() {
-    return this.form.get('nom');
+    return this.form.get('prenom');
   }
 
   get email() {
-    return this.form.get('nom');
+    return this.form.get('email');
   }
 
   get numRue() {
     return this.form.get('adresse').get('numRue');
+  }
+
+  get rue() {
+    return this.form.get('adresse').get('rue');
   }
 
   get ville() {

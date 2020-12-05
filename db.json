@@ -57,6 +57,38 @@
       "username": "houssinebrahim",
       "password": "123",
       "visibilite": 0
+    },
+    {
+      "id": 4,
+      "nom": "Brahim",
+      "prenom": "Habib",
+      "email": "habib.brahim@esprit.tn",
+      "adresse": {
+        "numRue": "03",
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": "5100"
+      },
+      "numTele": "23086255",
+      "username": "habibbrahim",
+      "password": "123",
+      "visibilite": 1
+    },
+    {
+      "id": 5,
+      "nom": "Chebbah",
+      "prenom": "Malika",
+      "email": "malika.chebbah@esprit.tn",
+      "adresse": {
+        "numRue": "03",
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": "5100"
+      },
+      "numTele": "20072721",
+      "username": "malikachebbah",
+      "password": "123",
+      "visibilite": 1
     }
   ],
   "clients": [
