@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddemployeComponent } from './addemploye/addemploye.component';
 import { AddclientComponent } from './addclient/addclient.component';
 import { UpdateemployeComponent } from './updateemploye/updateemploye.component';
+import { VisibiliteemployeComponent } from './visibiliteemploye/visibiliteemploye.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UpdateemployeComponent } from './updateemploye/updateemploye.component'
     ListemployeComponent,
     AddemployeComponent,
     AddclientComponent,
-    UpdateemployeComponent
+    UpdateemployeComponent,
+    VisibiliteemployeComponent
   ],
   imports: [
     BrowserModule,

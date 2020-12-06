@@ -13,10 +13,7 @@ legend.scheduler-border {
 }
 
 form{
-  background-image: url('C:\Users\Fahed\Documents\COURS 4TWIN5\Application coté client Angular\Projet Angular\Mini-Projet\src\assets\bg.jpg');
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  opacity: 0.2;
+  background: rgba(255,255,255,2);
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  border-radius: 25px;
 }

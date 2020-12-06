@@ -8,6 +8,7 @@ import {AddemployeComponent} from './addemploye/addemploye.component';
 import {ClientComponent} from './client/client.component';
 import {ListemployeComponent} from './listemploye/listemploye.component';
 import {UpdateemployeComponent} from './updateemploye/updateemploye.component';
+import {VisibiliteemployeComponent} from './visibiliteemploye/visibiliteemploye.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
     path: 'admin', component: AdminComponent,
     children: [
       {path: '', component: ListemployeComponent},
+      {path: 'visibiliteemploye/:id', component: VisibiliteemployeComponent},
       {path: 'updateemploye/:id', component: UpdateemployeComponent},
       {path: 'addemploye', component: AddemployeComponent}
 

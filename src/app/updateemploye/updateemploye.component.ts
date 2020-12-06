@@ -38,7 +38,6 @@ export class UpdateemployeComponent implements OnInit {
     this.employeservice.getEmployeById(this.route.snapshot.params.id).subscribe(
       resp => {
         this.employe = resp;
-        console.log(this.employe);
         this.form.patchValue(this.employe);
       }
     );
@@ -46,9 +45,9 @@ export class UpdateemployeComponent implements OnInit {
 
   modifierEmploye(u) {
     if (this.form.dirty) {
-
+      this.employeservice.updateEmploye(u.value, u.value.id).subscribe();
     }
-
+    this.router.navigate(['/admin']);
   }
 
   get id() {

@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {EmployeService} from '../Shared/employe.service';
 import {HttpClient} from '@angular/common/http';
 import {Employe} from '../../Model/employe';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-addemploye',
@@ -15,7 +16,7 @@ export class AddemployeComponent implements OnInit {
   newid: number;
   visible = 1;
 
-  constructor(private formP: FormBuilder, private employeservice: EmployeService, private http: HttpClient) {
+  constructor(private formP: FormBuilder, private employeservice: EmployeService, private http: HttpClient, private router : Router) {
     this.form = this.formP.group({
       id: [null, [Validators.required]],
       nom: [null, [Validators.required]],
@@ -46,6 +47,7 @@ export class AddemployeComponent implements OnInit {
 
   ajouterEmploye(u) {
     this.employeservice.addEmploye(u.value).subscribe();
+    this.router.navigate(['/admin']);
   }
 
   get id() {

@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Employe} from '../../Model/employe';
 import {EmployeService} from '../Shared/employe.service';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-listemploye',
@@ -10,8 +11,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ListemployeComponent implements OnInit {
   employes: Employe[];
+  employe;
   @Input() nbemploye: number;
-  constructor(private employeservice: EmployeService, private http: HttpClient) { }
+
+  constructor(private employeservice: EmployeService, private http: HttpClient, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.employeservice.getallemplyes().subscribe(
@@ -21,5 +25,4 @@ export class ListemployeComponent implements OnInit {
       }
     );
   }
-
 }

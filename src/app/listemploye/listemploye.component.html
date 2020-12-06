@@ -30,7 +30,7 @@
       <td>{{employe.username}}</td>
       <td>{{employe.password}}</td>
       <td>{{employe.visibilite}}</td>
-      <td><button class="btn btn-danger"[ngStyle]="{'background-color' : employe.visibilite===0 ? 'red' : 'green', 'border-radius': '10px'}">Disable</button></td>
+      <td><button class="btn btn-danger"[ngStyle]="{'background-color' : employe.visibilite===0 ? 'red' : 'green', 'border-radius': '10px'}" routerLink="/admin/visibiliteemploye/{{employe.id}}">Disable</button></td>
       <td><button class="btn btn-primary" [ngStyle]="{'border-radius': '10px'}" routerLink="/admin/updateemploye/{{employe.id}}">Modifier</button></td>
     </tr>
     </tbody>

@@ -56,7 +56,7 @@
       "numTele": 20705550,
       "username": "houssinebrahim",
       "password": "123",
-      "visibilite": 0
+      "visibilite": 1
     },
     {
       "id": 4,
@@ -87,6 +87,22 @@
       },
       "numTele": "20072721",
       "username": "malikachebbah",
+      "password": "123",
+      "visibilite": 1
+    },
+    {
+      "id": 6,
+      "nom": "Brahim",
+      "prenom": "Fares",
+      "email": "ahmed.brahim@gmail.com",
+      "adresse": {
+        "numRue": "03",
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": "5100"
+      },
+      "numTele": "23086255",
+      "username": "ahmedbrahim",
       "password": "123",
       "visibilite": 1
     }
