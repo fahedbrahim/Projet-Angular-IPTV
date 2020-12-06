@@ -1,5 +1,23 @@
-<span *ngFor="let employe of employes">
-  <table border="1">
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Prenom</th>
+    <th scope="col">Email</th>
+    <th scope="col">N° Rue</th>
+    <th scope="col">Rue</th>
+    <th scope="col">Ville</th>
+    <th scope="col">Code Postal</th>
+    <th scope="col">Username</th>
+    <th scope="col">Password</th>
+    <th scope="col">Visibilité</th>
+    <th scope="col">Action</th>
+    <th scope="col"></th>
+  </tr>
+    </thead>
+    <tbody *ngFor="let employe of employes">
     <tr>
       <td>{{employe.id}}</td>
       <td>{{employe.nom}}</td>
@@ -7,14 +25,21 @@
       <td>{{employe.email}}</td>
       <td>{{employe.adresse.numRue}}</td>
       <td>{{employe.adresse.rue}}</td>
+      <td>{{employe.adresse.ville}}</td>
       <td>{{employe.adresse.codePostal}}</td>
       <td>{{employe.username}}</td>
       <td>{{employe.password}}</td>
       <td>{{employe.visibilite}}</td>
-      <button [ngStyle]="{'background-color' : employe.visibilite===1 ? 'red' : 'green', 'border-radius': '10px'}">Disable</button>
-      <button [style.color]="'green'" routerLink="/admin/updateemploye/{{employe.id}}">Modifier</button>
+      <td><button class="btn btn-danger"[ngStyle]="{'background-color' : employe.visibilite===0 ? 'red' : 'green', 'border-radius': '10px'}">Disable</button></td>
+      <td><button class="btn btn-primary" [ngStyle]="{'border-radius': '10px'}" routerLink="/admin/updateemploye/{{employe.id}}">Modifier</button></td>
     </tr>
-
+    </tbody>
   </table>
-</span>
 <p>Nombre total des employe est {{nbemploye}}</p>
+
+
+
+
+
+
+

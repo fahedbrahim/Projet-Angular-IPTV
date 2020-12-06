@@ -1,4 +1,7 @@
+
 <form style="margin: 50px" [formGroup]="form">
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Information</legend>
   <div class="form-row">
     <div class="form-group col-md-3">
       <label for="id">Id</label>
@@ -26,7 +29,9 @@
       </div>
     </div>
   </div>
-  <h2>Adresse</h2>
+  </fieldset>
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Adresse</legend>
   <div formGroupName="adresse">
     <div class="form-row">
       <div class="form-group col-md-3">
@@ -59,6 +64,9 @@
       </div>
     </div>
   </div>
+  </fieldset>
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Identifiant</legend>
   <div class="form-row">
     <div class="form-group col-md-3">
       <label for="numTele">N° Téléphone</label>
@@ -89,5 +97,6 @@
       </div>
     </div>
   </div>
+  </fieldset>
   <button type="button" (click)="ajouterEmploye(form)" class="btn btn-dark" [disabled]="form.invalid">Ajouter</button>
 </form>

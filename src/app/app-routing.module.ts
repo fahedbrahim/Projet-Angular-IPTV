@@ -11,8 +11,7 @@ import {UpdateemployeComponent} from './updateemploye/updateemploye.component';
 
 
 const routes: Routes = [
-  {path: '', component: AccueilComponent},
-  {path: 'login', component: AccueilComponent},
+
 
   {
     path: 'employe/:id', component: EmployeComponent,
@@ -27,9 +26,13 @@ const routes: Routes = [
     path: 'admin', component: AdminComponent,
     children: [
       {path: '', component: ListemployeComponent},
-      {path: 'updateemploye/:id', component: UpdateemployeComponent}
+      {path: 'updateemploye/:id', component: UpdateemployeComponent},
+      {path: 'addemploye', component: AddemployeComponent}
+
     ]
   },
+  {path: 'login', component: AccueilComponent},
+  {path: '', component: AccueilComponent},
   {path: '**', component: AccueilComponent}
 ];
 
