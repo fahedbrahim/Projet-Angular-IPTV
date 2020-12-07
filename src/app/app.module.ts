@@ -14,6 +14,8 @@ import { AddemployeComponent } from './addemploye/addemploye.component';
 import { AddclientComponent } from './addclient/addclient.component';
 import { UpdateemployeComponent } from './updateemploye/updateemploye.component';
 import { VisibiliteemployeComponent } from './visibiliteemploye/visibiliteemploye.component';
+import { UpdateclientComponent } from './updateclient/updateclient.component';
+import { DeleteclientComponent } from './deleteclient/deleteclient.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { VisibiliteemployeComponent } from './visibiliteemploye/visibiliteemploy
     AddemployeComponent,
     AddclientComponent,
     UpdateemployeComponent,
-    VisibiliteemployeComponent
+    VisibiliteemployeComponent,
+    UpdateclientComponent,
+    DeleteclientComponent
   ],
   imports: [
     BrowserModule,

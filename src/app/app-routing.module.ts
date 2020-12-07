@@ -10,6 +10,8 @@ import {ListemployeComponent} from './listemploye/listemploye.component';
 import {UpdateemployeComponent} from './updateemploye/updateemploye.component';
 import {VisibiliteemployeComponent} from './visibiliteemploye/visibiliteemploye.component';
 import {AddclientComponent} from './addclient/addclient.component';
+import {UpdateclientComponent} from './updateclient/updateclient.component';
+import {DeleteclientComponent} from './deleteclient/deleteclient.component';
 
 
 const routes: Routes = [
@@ -19,10 +21,11 @@ const routes: Routes = [
     path: 'employe/:id', component: EmployeComponent,
     children: [
       {path: '', component: ClientComponent},
-      {path: 'addclient/:id', component: AddclientComponent}
+      {path: 'addclient/:id', component: AddclientComponent},
+      {path: 'updateclient/:id', component: UpdateclientComponent},
+      {path: 'deleteclient/:id', component: DeleteclientComponent},
     ]
   },
-  {path: 'ajoutemploye', component: AddemployeComponent},
   {path: 'client', component: ClientComponent},
   {
     path: 'admin', component: AdminComponent,

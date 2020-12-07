@@ -5,7 +5,7 @@
     <div class="form-row">
       <div class="form-group col-md-3">
         <label for="id">Id</label>
-        <input disabled type="text" id="id" class="form-control" [(ngModel)]="newid"  formControlName="id" >
+        <input disabled type="text" id="id" class="form-control"   formControlName="id" >
       </div>
       <div class="form-group col-md-3">
         <label for="nom">Name</label>
@@ -77,15 +77,15 @@
       </div>
       <div class="form-group col-md-3">
         <label for="datedebut">Date depart</label>
-        <input disabled type="text" id="datedebut" class="form-control" [(ngModel)]="datedepart" formControlName="datedebut">
+        <input  type="text" id="datedebut" class="form-control" formControlName="datedebut">
       </div>
       <div class="form-group col-md-3">
         <label for="dateexpiration">Date Exp</label>
-        <input disabled type="text" id="dateexpiration" class="form-control" [(ngModel)]="dateexp" formControlName="dateexpiration">
+        <input  type="text" id="dateexpiration" class="form-control"  formControlName="dateexpiration">
       </div>
       <div class="form-group col-md-3">
         <label for="idemploye">IdEmploye</label>
-        <input disabled type="text" id="idemploye" class="form-control" [(ngModel)]="idemp" [ngClass]="{'is-invalid': idemploye.invalid && idemploye.touched}" formControlName="idemploye">
+        <input disabled type="text" id="idemploye" class="form-control" [ngClass]="{'is-invalid': idemploye.invalid && idemploye.touched}" formControlName="idemploye">
         <div [hidden]="idemploye.valid">
           <p >Id obligatoire *</p>
         </div>
@@ -93,7 +93,7 @@
     </div>
   </fieldset>
   <div class="d-flex justify-content-center">
-    <button type="button" (click)="ajouterClient(form)" class="btn btn-dark mb-3 btn-lg" [disabled]="form.invalid">Ajouter</button>
+    <button type="button" (click)="modifierClient(form)" class="btn btn-dark mb-3 btn-lg" [disabled]="form.invalid">Modifier</button>
   </div>
 </form>
 

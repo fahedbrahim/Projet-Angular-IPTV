@@ -16,18 +16,18 @@ export class ClientService {
   }
 
   getClientById(id: number) {
-    return this.http.get('api/clients' + id);
+    return this.http.get('api/clients/' + id);
   }
 
   addClient(data: any): Observable<any> {
-    return this.http.post('api/clients', data);
+    return this.http.post('api/clients/', data);
   }
 
   updateClient(data: any, id: any): Observable<any> {
-    return this.http.put('api/clients' + id, data);
+    return this.http.put('api/clients/' + id, data);
   }
 
   deleteClient(id: number) {
-    return this.http.delete('api/clients' + id);
+    return this.http.delete('api/clients/' + id);
   }
 }
