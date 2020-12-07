@@ -26,11 +26,6 @@ export class AccueilComponent implements OnInit {
       resp => {
         this.employes = resp;
         const u = f.value;
-        console.log(new Date());
-        const date = new Date();
-        date.getFullYear();
-        date.setFullYear(date.getFullYear() + 1);
-        console.log('la nouvelle date est' + date);
         for (const employe of this.employes) {
           if (employe.username === u.username && employe.password === u.password && employe.visibilite === 1) {
             this.router.navigate(['employe', employe.id]);

@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Client} from '../../Model/client';
 import {HttpClient} from '@angular/common/http';
 import {ClientService} from '../Shared/client.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-addclient',
@@ -13,8 +14,11 @@ export class AddclientComponent implements OnInit {
   form: FormGroup;
   clients: Client[];
   newid: number;
+  idemp: number;
+  datedepart;
+  dateexp;
 
-  constructor(private formP: FormBuilder, private clientservice: ClientService, private http: HttpClient) {
+  constructor(private formP: FormBuilder, private clientservice: ClientService, private http: HttpClient, private router: Router, private route: ActivatedRoute) {
     this.form = this.formP.group({
       id: [null, [Validators.required]],
       nom: [null, [Validators.required]],
@@ -39,8 +43,17 @@ export class AddclientComponent implements OnInit {
         this.clients = resp;
         const client = this.clients[this.clients.length - 1];
         this.newid = client.id + 1;
+        this.idemp = this.route.snapshot.params.id;
+        this.datedepart = new Date();
+        this.dateexp = new Date();
+        this.dateexp.setFullYear(this.dateexp.getFullYear() + 1);
       }
     );
+  }
+
+  ajouterClient(u) {
+    this.clientservice.addClient(u.value).subscribe();
+    this.router.navigate(['/employe', u.value.idemploye]);
   }
 
   get id() {
@@ -61,6 +74,10 @@ export class AddclientComponent implements OnInit {
 
   get numRue() {
     return this.form.get('adresse').get('numRue');
+  }
+
+  get rue() {
+    return this.form.get('adresse').get('rue');
   }
 
   get ville() {

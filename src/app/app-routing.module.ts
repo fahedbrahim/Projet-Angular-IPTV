@@ -9,6 +9,7 @@ import {ClientComponent} from './client/client.component';
 import {ListemployeComponent} from './listemploye/listemploye.component';
 import {UpdateemployeComponent} from './updateemploye/updateemploye.component';
 import {VisibiliteemployeComponent} from './visibiliteemploye/visibiliteemploye.component';
+import {AddclientComponent} from './addclient/addclient.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,7 @@ const routes: Routes = [
     path: 'employe/:id', component: EmployeComponent,
     children: [
       {path: '', component: ClientComponent},
-      {path: 'addclient', component: AddemployeComponent}
+      {path: 'addclient/:id', component: AddclientComponent}
     ]
   },
   {path: 'ajoutemploye', component: AddemployeComponent},

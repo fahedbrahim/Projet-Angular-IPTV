@@ -1,1 +1,99 @@
-<p>addclient works!</p>
+
+<form style="margin: 50px" [formGroup]="form">
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Information</legend>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="id">Id</label>
+        <input disabled type="text" id="id" class="form-control" [(ngModel)]="newid"  formControlName="id" >
+      </div>
+      <div class="form-group col-md-3">
+        <label for="nom">Name</label>
+        <input type="text" id="nom" class="form-control" [ngClass]="{'is-invalid': nom.invalid && nom.touched}" formControlName="nom">
+        <div [hidden]="nom.valid">
+          <p >Nom obligatoire *</p>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="prenom">Prenom</label>
+        <input type="text" id="prenom" class="form-control" [ngClass]="{'is-invalid': prenom.invalid && prenom.touched}" formControlName="prenom">
+        <div [hidden]="prenom.valid">
+          <p >Prenom obligatoire *</p>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control" [ngClass]="{'is-invalid': email.invalid && email.touched}" formControlName="email">
+        <div [hidden]="email.valid">
+          <p >Email obligatoire *</p>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Adresse</legend>
+    <div formGroupName="adresse">
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="numRue">N° de Rue</label>
+          <input type="text" id="numRue" class="form-control" [ngClass]="{'is-invalid': numRue.invalid && numRue.touched}" formControlName="numRue">
+          <div [hidden]="numRue.valid">
+            <p >N° de rue obligatoire *</p>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="rue">Rue</label>
+          <input type="text" id="rue" class="form-control" [ngClass]="{'is-invalid': rue.invalid && rue.touched}" formControlName="rue">
+          <div [hidden]="rue.valid">
+            <p >Rue obligatoire *</p>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="ville">Ville</label>
+          <input type="text" id="ville" class="form-control" [ngClass]="{'is-invalid': ville.invalid && ville.touched}" formControlName="ville">
+          <div [hidden]="ville.valid">
+            <p >Ville obligatoire *</p>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="codePostal">Code Postale</label>
+          <input type="text" id="codePostal" class="form-control" [ngClass]="{'is-invalid': codePostal.invalid && codePostal.touched}" formControlName="codePostal">
+          <div [hidden]="codePostal.valid">
+            <p >Code Postale obligatoire *</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Identifiant</legend>
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label for="numTele">N° Téléphone</label>
+        <input type="text" id="numTele" class="form-control" [ngClass]="{'is-invalid': numTele.invalid && numTele.touched}" formControlName="numTele">
+        <div [hidden]="numTele.valid">
+          <p >N° Tel obligatoire *</p>
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label for="datedebut">Date depart</label>
+        <input disabled type="text" id="datedebut" class="form-control" [(ngModel)]="datedepart" formControlName="datedebut">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="dateexpiration">Date Exp</label>
+        <input disabled type="text" id="dateexpiration" class="form-control" [(ngModel)]="dateexp" formControlName="dateexpiration">
+      </div>
+      <div class="form-group col-md-3">
+        <label for="idemploye">IdEmploye</label>
+        <input disabled type="text" id="idemploye" class="form-control" [(ngModel)]="idemp" [ngClass]="{'is-invalid': idemploye.invalid && idemploye.touched}" formControlName="idemploye">
+        <div [hidden]="idemploye.valid">
+          <p >Id obligatoire *</p>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <div class="d-flex justify-content-center">
+    <button type="button" (click)="ajouterClient(form)" class="btn btn-dark mb-3 btn-lg" [disabled]="form.invalid">Ajouter</button>
+  </div>
+</form>
+
