@@ -1,4 +1,11 @@
-
+<app-calculenbremploye [nbrEmploye]="nbremploye" ></app-calculenbremploye>
+<div class="form-group row"></div>
+<div class="form-group row">
+  <label for="search" class="col-sm-2 col-form-label" style="text-align: right;">Search</label>
+  <div class="col-sm-6">
+    <input type="text" [(ngModel)]="searchValue" class="form-control" id="search">
+  </div>
+</div>
 <table class="table table-striped">
     <thead class="thead-dark">
   <tr>
@@ -17,7 +24,7 @@
     <th scope="col"></th>
   </tr>
     </thead>
-    <tbody *ngFor="let employe of employes">
+    <tbody *ngFor="let employe of employes | searchfilteremploye:searchValue">
     <tr>
       <td>{{employe.id}}</td>
       <td>{{employe.nom}}</td>
@@ -35,7 +42,7 @@
     </tr>
     </tbody>
   </table>
-<p>Nombre total des employe est {{nbemploye}}</p>
+
 
 
 

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Employe} from '../../Model/employe';
 import {EmployeService} from '../Shared/employe.service';
 import {HttpClient} from '@angular/common/http';
@@ -12,7 +12,8 @@ import {Router} from '@angular/router';
 export class ListemployeComponent implements OnInit {
   employes: Employe[];
   employe;
-  @Input() nbemploye: number;
+  nbremploye;
+  searchValue: string;
 
   constructor(private employeservice: EmployeService, private http: HttpClient, private router: Router) {
   }
@@ -22,6 +23,7 @@ export class ListemployeComponent implements OnInit {
       resp => {
         console.log(resp);
         this.employes = resp;
+        this.nbremploye = resp.length;
       }
     );
   }
