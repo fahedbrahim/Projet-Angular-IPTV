@@ -27,7 +27,14 @@ export class ListemployeComponent implements OnInit {
       }
     );
   }
-  claculeVente(prixTotal){
+
+  claculeVente(prixTotal) {
     this.totalVente = prixTotal;
+  }
+  key: string = 'id';
+  reverse: boolean = false;
+  sort(key) {
+  this.key = key;
+  this.reverse = !this.reverse;
   }
 }

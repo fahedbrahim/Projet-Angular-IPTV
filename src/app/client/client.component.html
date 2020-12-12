@@ -1,4 +1,16 @@
-
+<div class="form-group row"></div>
+<div class="form-group row">
+  <label  class="col-sm-2 col-form-label" style="text-align: right;">Search</label>
+  <div class="col-sm-6">
+    <input type="text" name="nom" [(ngModel)]="nom" (ngModelChange)="searchNom()" class="form-control"  placeholder="search by lastname">
+  </div>
+</div>
+<div class="form-group row">
+  <label  class="col-sm-2 col-form-label" style="text-align: right;">Search</label>
+  <div class="col-sm-6">
+    <input type="text" name="prenom" [(ngModel)]="prenom" (ngModelChange)="searchPrenom()" class="form-control"  placeholder="search by firstname">
+  </div>
+</div>
 <table class="table table-striped">
   <thead class="thead-dark">
   <tr>

@@ -18,6 +18,8 @@ import { UpdateclientComponent } from './updateclient/updateclient.component';
 import { DeleteclientComponent } from './deleteclient/deleteclient.component';
 import { CalculenbremployeComponent } from './calculenbremploye/calculenbremploye.component';
 import { SearchfilteremployePipe } from './searchfilteremploye.pipe';
+import { Ng2OrderModule} from 'ng2-order-pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { SearchfilteremployePipe } from './searchfilteremploye.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2OrderModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

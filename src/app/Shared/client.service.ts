@@ -19,6 +19,13 @@ export class ClientService {
     return this.http.get('api/clients/' + id);
   }
 
+  findByName(name) {
+    return this.http.get<Client[]>('api/clients?nom=' + name);
+  }
+  findByFistname(firstname) {
+    return this.http.get<Client[]>('api/clients?prenom=' + firstname);
+  }
+
   addClient(data: any): Observable<any> {
     return this.http.post('api/clients/', data);
   }
