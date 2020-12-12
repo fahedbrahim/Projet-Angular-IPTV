@@ -6,10 +6,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/employe/{{idemploye}}">List Clients</a>
+        <a class="nav-link" routerLink="/employe/{{idemploye}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">List Clients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/employe/{{idemploye}}/addclient/{{idemploye}}">Nouveau Client</a>
+        <a class="nav-link" routerLink="/employe/{{idemploye}}/addclient/{{idemploye}}" routerLinkActive="active">Nouveau Client</a>
       </li>
     </ul>
   </div>

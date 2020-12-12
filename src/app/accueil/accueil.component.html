@@ -10,17 +10,17 @@
         <form #f="ngForm">
           <div class="form-row">
             <div class="col-lg-7">
-              <input type="email" placeholder="Username" class="form-control my-3 p-4" ngModel name="username" #username="ngModel">
+              <input type="email" placeholder="Username" class="form-control my-3 p-4" ngModel name="username" #username="ngModel" required [ngClass]="{'is-invalid': username.invalid && username.touched}">
             </div>
           </div>
           <div class="form-row">
             <div class="col-lg-7">
-              <input type="password" placeholder="Password" class="form-control my-3 p-4" ngModel name="password" #password="ngModel">
+              <input type="password" placeholder="Password" class="form-control my-3 p-4" ngModel name="password" #password="ngModel" required [ngClass]="{'is-invalid': password.invalid && password.touched}">
             </div>
           </div>
           <div class="form-row">
             <div class="col-lg-7">
-              <button type="button" class="btn1" (click)="validLogin(f)">Login</button>
+              <button type="button" class="btn1" (click)="validLogin(f)" [disabled]="f.invalid">Login</button>
             </div>
           </div>
         </form>

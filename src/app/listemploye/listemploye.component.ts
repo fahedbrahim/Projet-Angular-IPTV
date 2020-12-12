@@ -14,6 +14,7 @@ export class ListemployeComponent implements OnInit {
   employe;
   nbremploye;
   searchValue: string;
+  totalVente;
 
   constructor(private employeservice: EmployeService, private http: HttpClient, private router: Router) {
   }
@@ -21,10 +22,12 @@ export class ListemployeComponent implements OnInit {
   ngOnInit(): void {
     this.employeservice.getallemplyes().subscribe(
       resp => {
-        console.log(resp);
         this.employes = resp;
         this.nbremploye = resp.length;
       }
     );
+  }
+  claculeVente(prixTotal){
+    this.totalVente = prixTotal;
   }
 }

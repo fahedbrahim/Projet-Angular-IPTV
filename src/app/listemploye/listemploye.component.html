@@ -1,4 +1,5 @@
-<app-calculenbremploye [nbrEmploye]="nbremploye" ></app-calculenbremploye>
+<app-calculenbremploye [nbrEmploye]="nbremploye" (totalvente)="claculeVente($event)"></app-calculenbremploye>
+<input type="text" [(ngModel)]="totalVente" class="form-control col-md-2 mt-3">
 <div class="form-group row"></div>
 <div class="form-group row">
   <label for="search" class="col-sm-2 col-form-label" style="text-align: right;">Search</label>

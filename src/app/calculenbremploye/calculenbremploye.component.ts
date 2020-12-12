@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ClientService} from '../Shared/client.service';
 
 @Component({
   selector: 'app-calculenbremploye',
@@ -7,9 +8,22 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CalculenbremployeComponent implements OnInit {
   @Input() nbrEmploye;
-  constructor() { }
+  @Output() totalvente = new EventEmitter<number>();
+  total;
+
+  constructor(private clientservice: ClientService) {
+  }
 
   ngOnInit(): void {
+  }
+
+  calculeVente() {
+    this.clientservice.getallClients().subscribe(
+      resp => {
+        this.total = resp.length * 50;
+        this.totalvente.emit(this.total);
+      }
+    );
   }
 
 }
