@@ -56,7 +56,7 @@
       "numTele": 20705550,
       "username": "houssinebrahim",
       "password": "123",
-      "visibilite": 1
+      "visibilite": 0
     },
     {
       "id": 4,
@@ -105,6 +105,22 @@
       "username": "ahmedbrahim",
       "password": "123",
       "visibilite": 1
+    },
+    {
+      "id": 7,
+      "nom": "Brahim",
+      "prenom": "jamil",
+      "email": "jm@gmail.com",
+      "adresse": {
+        "numRue": "03",
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": "5100"
+      },
+      "numTele": "23086255",
+      "username": "jamilbrahim",
+      "password": "123",
+      "visibilite": 1
     }
   ],
   "clients": [
@@ -127,7 +143,7 @@
     {
       "id": 2,
       "nom": "Hassine",
-      "prenom": "Mariem",
+      "prenom": "saida",
       "email": "mariem.hassine@esprit.tn",
       "adresse": {
         "numRue": 4,
@@ -155,6 +171,22 @@
       "datedebut": "Mon Nov 23 2020 17:53:55 GMT+0100",
       "dateexpiration": "Nov 23 2021 17:53:55 GMT+0100",
       "idemploye": 2
+    },
+    {
+      "id": 5,
+      "nom": "Brahim",
+      "prenom": "gb",
+      "email": "fahed.brahim@esprit.tn",
+      "adresse": {
+        "numRue": "03",
+        "rue": "rue elbousten Zouila",
+        "ville": "Mahdia",
+        "codePostal": "5100"
+      },
+      "numTele": "58093627",
+      "datedebut": "2020-12-13T09:52:01.348Z",
+      "dateexpiration": "2021-12-13T09:52:01.348Z",
+      "idemploye": "1"
     }
   ]
 }
