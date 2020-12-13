@@ -15,12 +15,8 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
     this.employeservice.getallemplyes().subscribe(
       resp => {
-        console.log(resp);
         this.nbemp = resp.length;
       }
     );
-  }
-  ajoutemploye(){
-    this.router.navigate(['ajoutemploye']);
   }
 }

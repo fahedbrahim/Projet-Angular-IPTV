@@ -23,7 +23,6 @@ export class VisibiliteemployeComponent implements OnInit {
         {
           this.employe.visibilite = 1;
         }
-        console.log(this.employe.visibilite);
         this.employeservice.updateEmploye(this.employe, this.employe.id).subscribe();
         this.router.navigate(['/admin']);
       }

@@ -1,10 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Employe} from '../../Model/employe';
-import {Admin} from '../../Model/admin';
+
 import {AdminService} from '../Shared/admin.service';
 import {EmployeService} from '../Shared/employe.service';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {Employe} from '../Model/employe';
+import {Admin} from '../Model/admin';
 
 @Component({
   selector: 'app-accueil',

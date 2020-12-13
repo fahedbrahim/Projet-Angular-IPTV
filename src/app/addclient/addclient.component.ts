@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Client} from '../../Model/client';
 import {HttpClient} from '@angular/common/http';
 import {ClientService} from '../Shared/client.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Client} from '../Model/client';
 
 @Component({
   selector: 'app-addclient',

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Employe} from '../../Model/employe';
+import {Employe} from '../Model/employe';
 import {EmployeService} from '../Shared/employe.service';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
@@ -31,10 +31,13 @@ export class ListemployeComponent implements OnInit {
   claculeVente(prixTotal) {
     this.totalVente = prixTotal;
   }
+
   key: string = 'id';
   reverse: boolean = false;
+
   sort(key) {
-  this.key = key;
-  this.reverse = !this.reverse;
+    this.key = key;
+    this.reverse = !this.reverse;
   }
+
 }

@@ -3,7 +3,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {EmployeService} from '../Shared/employe.service';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Employe} from '../../Model/employe';
 
 @Component({
   selector: 'app-updateemploye',
@@ -46,6 +45,7 @@ export class UpdateemployeComponent implements OnInit {
   modifierEmploye(u) {
     if (this.form.dirty) {
       this.employeservice.updateEmploye(u.value, u.value.id).subscribe();
+      console.log('le formulaire est toucher');
     }
     this.router.navigate(['/admin']);
   }

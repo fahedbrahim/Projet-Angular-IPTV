@@ -13,7 +13,4 @@ export class EmployeComponent implements OnInit {
   ngOnInit(): void {
     this.idemploye = this.route.snapshot.params.id;
   }
-  ajoutclient(){
-    // this.router.navigate(['employe', employe.id]);
-  }
 }

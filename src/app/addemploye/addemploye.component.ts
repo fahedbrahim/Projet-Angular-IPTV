@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {EmployeService} from '../Shared/employe.service';
 import {HttpClient} from '@angular/common/http';
-import {Employe} from '../../Model/employe';
+import {Employe} from '../Model/employe';
 import {Router} from '@angular/router';
 
 @Component({

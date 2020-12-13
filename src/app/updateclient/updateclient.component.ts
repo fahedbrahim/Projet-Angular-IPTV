@@ -43,6 +43,7 @@ export class UpdateclientComponent implements OnInit {
   modifierClient(u) {
     if (this.form.dirty) {
       this.clientservice.updateClient(u.value, u.value.id).subscribe();
+      console.log('le formulaire est toucher');
     }
     this.router.navigate(['/employe', u.value.idemploye]);
   }

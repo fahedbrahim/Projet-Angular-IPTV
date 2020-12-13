@@ -26,7 +26,6 @@ const routes: Routes = [
       {path: 'deleteclient/:id', component: DeleteclientComponent},
     ]
   },
-  {path: 'client', component: ClientComponent},
   {
     path: 'admin', component: AdminComponent,
     children: [
